@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BoomView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDa-SH-0Bg">
+                                <rect key="frame" x="167" y="422" width="40" height="30"/>
+                                <state key="normal" title="Boom">
+                                    <color key="titleColor" red="0.93725490570000003" green="0.34901961679999999" blue="0.1921568662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Xa-k6-6iK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSH-ai-JQ9">
+                                <rect key="frame" x="167.5" y="472" width="39" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.93725490570000003" green="0.34901961679999999" blue="0.1921568662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ASh-t4-kBS"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="pkD-67-dC7">
+                                <rect key="frame" x="137" y="120" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="I8d-PY-fm8"/>
+                                    <constraint firstAttribute="height" constant="100" id="fny-Nh-vs2"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="Wo5-h6-aI2">
+                                <rect key="frame" x="137.5" y="262" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="2zJ-pk-xqr"/>
+                                    <constraint firstAttribute="width" constant="100" id="MQK-ux-llf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TSH-ai-JQ9" firstAttribute="top" secondItem="lDa-SH-0Bg" secondAttribute="bottom" constant="20" id="4mg-Wu-M2j"/>
+                            <constraint firstItem="lDa-SH-0Bg" firstAttribute="centerX" secondItem="Wo5-h6-aI2" secondAttribute="centerX" id="Tyi-0H-ggw"/>
+                            <constraint firstItem="pkD-67-dC7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="VUT-xc-gyu"/>
+                            <constraint firstItem="pkD-67-dC7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b7h-zh-JgM"/>
+                            <constraint firstItem="Wo5-h6-aI2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eEZ-Hf-NTs"/>
+                            <constraint firstItem="lDa-SH-0Bg" firstAttribute="top" secondItem="Wo5-h6-aI2" secondAttribute="bottom" constant="60" id="mp9-ew-qae"/>
+                            <constraint firstItem="Wo5-h6-aI2" firstAttribute="top" secondItem="pkD-67-dC7" secondAttribute="bottom" constant="42" id="pvj-Mr-tGh"/>
+                            <constraint firstItem="TSH-ai-JQ9" firstAttribute="centerX" secondItem="lDa-SH-0Bg" secondAttribute="centerX" id="zXm-kR-AVd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView1" destination="pkD-67-dC7" id="09n-BA-3RK"/>
+                        <outlet property="imgView2" destination="Wo5-h6-aI2" id="1a4-MU-W74"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="512" height="512"/>
+        <image name="2" width="512" height="493"/>
+    </resources>
+</document>
